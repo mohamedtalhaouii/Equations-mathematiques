@@ -13,9 +13,16 @@ if Delta == 0 :
    X = -b / (2 * a)
    print("The Solution is : " , "X =",Fraction(X))
 
-# D < 0
-if Delta < 0 :
-   print("No Solution in Ensemble R")
+# D < 0 (Complex Solution)
+if Delta < 0:
+   A1 = (-b / (2 * a))
+   B1 = ( sqrt(-Delta) / (2 * a))
+   B2 = (-sqrt(-Delta) / (2 * a))
+   
+   Z1 = Fraction(A1) + Fraction(B1)*1j
+   Z2 = Fraction(A1) + Fraction(B2)*1j
+
+   print("The Solution is: Z1 = ", Z1 ,"and Z2 = ", Z2)
 
 # D > 0
 if Delta > 0 :
